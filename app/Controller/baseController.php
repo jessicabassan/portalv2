@@ -14,7 +14,7 @@ abstract class baseController
     public function __construct(\Pimple $container, $request)
     {
         $this->view = $container['twig'];
-        $this->conn = $container['db'];
+        //$this->conn = $container['db'];
         $this->app = $container;
         $this->request = $request;
         $this->path = $this->getView();
@@ -30,11 +30,11 @@ abstract class baseController
         $this->setPathView($folder);
         
         return $this->view->render(
-            $this->getFullPath($tpl),
+            $this->getFullPath($tpl)/*,
             array(
                 'error' => $this->app['security.last_error']($this->request),
                 'last_username' => $this->app['session']->get('_security.last_username'),
-            )
+            )*/
         );
     }
     

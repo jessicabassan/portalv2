@@ -5,7 +5,7 @@ class conteudoController extends baseController
 {
     public function index()
     {
-       return  $this->app->redirect('/sistema');
+       return $this->render('home');
     }
     
     public function eleitoral()

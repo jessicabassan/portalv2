@@ -1,14 +1,7 @@
 <?php
-//php -S localhost:8000
-require_once __DIR__.'/../vendor/autoload.php';
 
-$app = new Silex\Application();
+ini_set('display_errors', true);
 
-$app->get('/nome/{nome}', function ($nome = null) use ($app) {
-		$nome = ["nome" => "Ola: <strong>$nome</strong>"];
-		return $app->json($nome, 200);
-});
+require_once __DIR__ . '/../vendor/autoload.php';
 
-$app['debug'] = true;
-
-$app->run();
+$app = require_once dirname(__DIR__) . "/app/app.php";

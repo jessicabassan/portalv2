@@ -15,7 +15,7 @@ $Regex = new \RegexIterator($Iterator, '/^.+\.php$/i', RecursiveRegexIterator::G
 foreach ($Regex->getInnerIterator() as $file) {
     if ($file->isFile() && !in_array($file->getFileName(), $exclude)) {
         $name = strtolower(str_replace('Controller', '', reset(explode('.', $file->getFileName()))));
-    
+        
         $controller = sprintf(
             "app\Controller\%s\%sController",
             ucfirst($name),

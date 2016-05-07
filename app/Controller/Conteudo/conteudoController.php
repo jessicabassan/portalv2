@@ -8,8 +8,8 @@ class conteudoController extends baseController
        return $this->render('home');
     }
     
-    public function eleitoral()
+    public function quemsomos()
     {
-        return $this->render('home');
+        return $this->render('novo');
     }
 }

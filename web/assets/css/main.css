@@ -1,0 +1,28 @@
+html {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+body {
+	margin: 0 auto;
+}
+
+#page{
+	padding: 0 auto;
+	margin: 0 auto;
+	background: red;
+	width: 640px;
+	overflow: hidden;
+}
+
+#cabecalho{
+	background: green;
+	overflow: hidden;
+}
+
+#cabecalho #conteudo-cabecalho{
+	background: yellow none repeat scroll 0 0;
+    float: left;
+    text-align: center;
+    width: 320px;
+}

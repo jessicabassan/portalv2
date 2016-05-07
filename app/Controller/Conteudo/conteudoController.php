@@ -5,11 +5,11 @@ class conteudoController extends baseController
 {
     public function index()
     {
-       return $this->render('home', ["data" => 'INICIAL1']);
+       return $this->render('home', ["data" => 'Portal Idoso']);
     }
     
     public function quemsomos()
     {
-        return $this->render('novo');
+        return $this->render('quemsomos');
     }
 }

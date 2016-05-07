@@ -31,6 +31,7 @@ class __TwigTemplate_9ce0a6a88a16a10e8ebefb3c233269330066c5594af9e9704f9571b9137
         echo "    <h1>";
         echo twig_escape_filter($this->env, (isset($context["data"]) ? $context["data"] : $this->getContext($context, "data")), "html", null, true);
         echo "</h1>
+    <p>Não importa qual seja a sua idade atual: moço, meia idade ou velho. Sua idade é um estado de sua mente e seus interesses devem sempre estar voltados para o futuro, para a frente, para o amanhã.</p>
 ";
     }
 
@@ -53,4 +54,5 @@ class __TwigTemplate_9ce0a6a88a16a10e8ebefb3c233269330066c5594af9e9704f9571b9137
 /* */
 /* {% block content %}*/
 /*     <h1>{{data}}</h1>*/
+/*     <p>Não importa qual seja a sua idade atual: moço, meia idade ou velho. Sua idade é um estado de sua mente e seus interesses devem sempre estar voltados para o futuro, para a frente, para o amanhã.</p>*/
 /* {% endblock %}*/

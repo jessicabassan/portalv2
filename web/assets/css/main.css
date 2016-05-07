@@ -1,28 +1,60 @@
 html {
 	margin: 0 auto;
 	padding: 0 auto;
+	background: #DDD;
 }
 
 body {
 	margin: 0 auto;
 }
 
+h1, h2, p {
+	margin: 10px;
+}
+
 #page{
 	padding: 0 auto;
 	margin: 0 auto;
-	background: red;
 	width: 640px;
 	overflow: hidden;
+	background: #FFF;
 }
 
 #cabecalho{
-	background: green;
+	background: #FFF;
 	overflow: hidden;
 }
 
-#cabecalho #conteudo-cabecalho{
+#cabecalho .conteudo-cabecalho{
 	background: yellow none repeat scroll 0 0;
     float: left;
     text-align: center;
     width: 320px;
+}
+
+#menu {
+	width: 320px;
+}
+
+#logo{
+	width: 220px;
+}
+
+#logo img{
+	width: 180px;
+	height: 100px;
+	margin: 10px;
+}
+
+#rodape {
+	background: #666;
+	color: #FFF; 
+	text-align: center;
+	font-size: 12px;
+	line-height: 29px;	
+}
+
+#main {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }

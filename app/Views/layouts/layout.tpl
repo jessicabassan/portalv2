@@ -16,11 +16,11 @@
 
 <div id="page">
 	<div id="cabecalho">
-		<div id="conteudo-cabecalho">
-			<div id="logo"><a href="/">LOGO VAI AQUI</a></div>
+		<div class="conteudo-cabecalho">
+			<div id="logo"><a href="/"><img src="{{ app.request.basepath }}/assets/image/logo.png" ></a></div>
 		</div>
 
-		<div id="conteudo-cabecalho">
+		<div class="conteudo-cabecalho">
 			<div id="menu">
 				<ul>
 					<li>
@@ -31,11 +31,10 @@
 		</div>
 	</div>
 	<div id="main">
-		CONTEUDO VAI AQUI
 		{% block content %}{% endblock %}
 	</div>
 	<div id="rodape">
-		RODAPE VAI AQUI
+		This website is powered by Melhor Idade SA and Michael Douglas. © 2016
 	</div>
 </div>
 

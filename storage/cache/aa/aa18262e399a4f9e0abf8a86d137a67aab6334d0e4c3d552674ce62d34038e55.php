@@ -38,11 +38,14 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 
 <div id=\"page\">
 \t<div id=\"cabecalho\">
-\t\t<div id=\"conteudo-cabecalho\">
-\t\t\t<div id=\"logo\"><a href=\"/\">LOGO VAI AQUI</a></div>
+\t\t<div class=\"conteudo-cabecalho\">
+\t\t\t<div id=\"logo\"><a href=\"/\"><img src=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "basepath", array()), "html", null, true);
+        echo "/assets/image/logo.png\" ></a></div>
 \t\t</div>
 
-\t\t<div id=\"conteudo-cabecalho\">
+\t\t<div class=\"conteudo-cabecalho\">
 \t\t\t<div id=\"menu\">
 \t\t\t\t<ul>
 \t\t\t\t\t<li>
@@ -53,14 +56,13 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 \t\t</div>
 \t</div>
 \t<div id=\"main\">
-\t\tCONTEUDO VAI AQUI
 \t\t";
-        // line 35
+        // line 34
         $this->displayBlock('content', $context, $blocks);
-        // line 36
+        // line 35
         echo "\t</div>
 \t<div id=\"rodape\">
-\t\tRODAPE VAI AQUI
+\t\tThis website is powered by Melhor Idade SA and Michael Douglas. © 2016
 \t</div>
 </div>
 
@@ -69,7 +71,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 </html>";
     }
 
-    // line 35
+    // line 34
     public function block_content($context, array $blocks = array())
     {
     }
@@ -86,7 +88,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 
     public function getDebugInfo()
     {
-        return array (  73 => 35,  61 => 36,  59 => 35,  33 => 12,  20 => 1,);
+        return array (  75 => 34,  63 => 35,  61 => 34,  44 => 20,  33 => 12,  20 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -107,11 +109,11 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 /* */
 /* <div id="page">*/
 /* 	<div id="cabecalho">*/
-/* 		<div id="conteudo-cabecalho">*/
-/* 			<div id="logo"><a href="/">LOGO VAI AQUI</a></div>*/
+/* 		<div class="conteudo-cabecalho">*/
+/* 			<div id="logo"><a href="/"><img src="{{ app.request.basepath }}/assets/image/logo.png" ></a></div>*/
 /* 		</div>*/
 /* */
-/* 		<div id="conteudo-cabecalho">*/
+/* 		<div class="conteudo-cabecalho">*/
 /* 			<div id="menu">*/
 /* 				<ul>*/
 /* 					<li>*/
@@ -122,11 +124,10 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 /* 		</div>*/
 /* 	</div>*/
 /* 	<div id="main">*/
-/* 		CONTEUDO VAI AQUI*/
 /* 		{% block content %}{% endblock %}*/
 /* 	</div>*/
 /* 	<div id="rodape">*/
-/* 		RODAPE VAI AQUI*/
+/* 		This website is powered by Melhor Idade SA and Michael Douglas. © 2016*/
 /* 	</div>*/
 /* </div>*/
 /* */

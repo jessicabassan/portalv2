@@ -5,7 +5,7 @@ class conteudoController extends baseController
 {
     public function index()
     {
-       return $this->render('home');
+       return $this->render('home', ["data" => 'INICIAL1']);
     }
     
     public function quemsomos()

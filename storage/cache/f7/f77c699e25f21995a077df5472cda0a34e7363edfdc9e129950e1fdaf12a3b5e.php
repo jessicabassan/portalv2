@@ -28,7 +28,9 @@ class __TwigTemplate_9ce0a6a88a16a10e8ebefb3c233269330066c5594af9e9704f9571b9137
     public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "    <h1>INICIAL</h1>
+        echo "    <h1>";
+        echo twig_escape_filter($this->env, (isset($context["data"]) ? $context["data"] : $this->getContext($context, "data")), "html", null, true);
+        echo "</h1>
 ";
     }
 
@@ -50,5 +52,5 @@ class __TwigTemplate_9ce0a6a88a16a10e8ebefb3c233269330066c5594af9e9704f9571b9137
 /* {% extends 'layouts/layout.tpl' %}*/
 /* */
 /* {% block content %}*/
-/*     <h1>INICIAL</h1>*/
+/*     <h1>{{data}}</h1>*/
 /* {% endblock %}*/

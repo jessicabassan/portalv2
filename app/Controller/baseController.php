@@ -2,15 +2,14 @@
 
 namespace app\Controller;
 
-abstract class baseController
+abstract class BaseController
 {
-
     private $view;
     private $conn;
     protected $app;
     private $viewName;
     private $folder;
-
+    const   MODULE = 'modules/adminportal';
     public function __construct(\Pimple $container, $request)
     {
         $this->view = $container['twig'];
@@ -18,24 +17,34 @@ abstract class baseController
         $this->app = $container;
         $this->request = $request;
         $this->path = $this->getView();
+        $this->register();
     }
-
     protected function fetchAll($query)
     {
         return $this->conn->fetchAll($query);
     }
     
-    protected function render($tpl, $folder = 'pages')
+    protected function render($tpl, $params = [], $folder = 'pages')
     {
         $this->setPathView($folder);
         
         return $this->view->render(
-            $this->getFullPath($tpl)/*,
-            array(
+            $this->getFullPath($tpl),
+            $this->setParams($params)
+        );
+    }
+    
+    private function getDefaultParams()
+    {
+        /*return [
                 'error' => $this->app['security.last_error']($this->request),
                 'last_username' => $this->app['session']->get('_security.last_username'),
-            )*/
-        );
+            ];*/
+    }
+    
+    private function setParams($params = [])
+    {
+        return array_merge((array) $this->getDefaultParams(), (array) $params);
     }
     
     public function setPathView($folder)
@@ -61,8 +70,14 @@ abstract class baseController
     
     public function getPathView($path)
     {
+       
         $this->viewName = sprintf('%s/%s/', $path, $this->viewName);
         
         return $this->viewName;
+    }
+    
+    public function register()
+    {
+        
     }
 }

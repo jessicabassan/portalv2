@@ -10,6 +10,15 @@ class conteudoController extends baseController
     
     public function quemsomos()
     {
-        return $this->render('quemsomos');
+    	$sql = 'SELECT * FROM conteudo WHERE titulo = "quemsomos"';
+    	$dados = $this->app['db']->fetchAssoc($sql);
+    
+        return $this->render('quemsomos', $dados);
     }
+
+    public function contato()
+    {
+        return $this->render('contato');
+    }
+
 }

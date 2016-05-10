@@ -2,6 +2,7 @@
 
 #Chama as classes necessarias para utilização
 use Silex\Provider\UrlGeneratorServiceProvider;
+use Symfony\Component\HttpFoundation\Request;
 
 #config do sistema
 $directory = [];
@@ -15,6 +16,17 @@ $app = new Silex\Application();
 
 #Registra o objeto para criação de URL
 $app->register(new UrlGeneratorServiceProvider());
+
+$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'db.options' => array(
+        'driver'   => 'pdo_mysql',
+        'host' => '127.0.0.1',
+        'dbname'  => 'PHPONG', 
+        'user' =>  'root',
+        'password'  => '123456', 
+        'charset' => 'utf8mb4',
+    ),
+));
 
 #ativa o debug
 $app['debug'] = true;
@@ -43,6 +55,7 @@ require_once $directory['directoryROOT'] . '/config/twig.php';
 $app->register(new \Silex\Provider\ServiceControllerServiceProvider());
 $app->register(new \Silex\Provider\UrlGeneratorServiceProvider());
 $app->register(new Silex\Provider\SessionServiceProvider());
+
 
 #Chamada de arquivos necessarios
 require_once __DIR__ . '/Services/services.php';

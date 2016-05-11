@@ -4,7 +4,7 @@
 <div class="container">
           <div class="row">
               <div class="col-lg-12">
-      <form class="form-signin" action="portal/back/usuario.php" method="GET">
+      <form class="form-signin" action="/admin" method="GET">
         <h2 class="form-signin-heading">Por favor realize o Login</h2>
         <label for="inputEmail" class="sr-only">Endereco de Email</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>

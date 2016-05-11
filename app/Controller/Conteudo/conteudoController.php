@@ -3,6 +3,7 @@ namespace app\Controller\Conteudo;
 use app\Controller\baseController;
 class conteudoController extends baseController 
 {
+    //Portal
     public function index()
     {
        return $this->render('home', ["data" => 'Portal Idoso']);
@@ -26,4 +27,14 @@ class conteudoController extends baseController
         return $this->render('login');
     }
 
+    //Admin
+    public function indexAdmin()
+    {
+        return $this->render('loginAdmin');
+    }
+
+    public function dashboard()
+    {
+        return $this->render('dashboard');
+    }
 }

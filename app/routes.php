@@ -4,9 +4,11 @@ use Symfony\Component\HttpFoundation\Request;
 $app->get('/', 'conteudo:index');
 $app->get('/quemsomos', 'conteudo:quemsomos');
 $app->get('/contato', 'conteudo:contato');
+$app->get('/login', 'conteudo:login');
+$app->get('/admin/', 'conteudo:indexAdmin');
+$app->get('/admin/dashboard', 'conteudo:dashboard');
 
 $app->post('/contato', function (Request $request) use ($app) {
-    $sql = "INSERT INTO contato (nome, email, assunto, mensagem) VALUES (?,?,?,?)";
     $post = array(
     	'nome' => $request->request->get('nome'),
     	'email' => $request->request->get('email'),
@@ -17,12 +19,12 @@ $app->post('/contato', function (Request $request) use ($app) {
     $post = $app['db']->insert('contato', $post);
 
     $message = \Swift_Message::newInstance()
-        ->setSubject('teste')
-        ->setFrom(array('melhoridade@gmail.com'))
-        ->setTo(array('melhoridade@gmail.com'))
-        ->setBody($request->get('TeTa'));
+        ->setSubject($request->request->get('assunto'))
+        ->setFrom(array('melhoridadesa@gmail.com'))
+        ->setTo(array($request->request->get('email')))
+        ->setBody($request->get($request->request->get('mensagem')));
 
-    $app['mailer']->send($message);
+    $enviado = $app['mailer']->send($message);
 
     return $app->redirect('/contato?sucesso');
 });

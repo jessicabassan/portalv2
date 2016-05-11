@@ -21,4 +21,9 @@ class conteudoController extends baseController
         return $this->render('contato');
     }
 
+    public function login()
+    {
+        return $this->render('login');
+    }
+
 }

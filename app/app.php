@@ -28,6 +28,16 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     ),
 ));
 
+$app->register(new Silex\Provider\SwiftmailerServiceProvider());
+$app['swiftmailer.options'] = array(
+    'host' => 'smtp.gmail.com',
+    'port' => '465',
+    'username' => 'melhoridade@gmail.com',
+    'password' => 'MelhorIdade2016',
+    'encryption' => null,
+    'auth_mode' => 'login'
+);
+
 #ativa o debug
 $app['debug'] = true;
 

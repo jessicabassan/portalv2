@@ -23,7 +23,8 @@
         "symfony/finder": "2.3.*",
         "symfony/process": "2.3.*",
         "symfony/doctrine-bridge": "2.3.*",
-        "doctrine/common": "2.5.*"
+        "doctrine/common": "2.5.*",
+        "swiftmailer/swiftmailer": "^5.4"
     },
     "autoload": {
         "psr-0": {

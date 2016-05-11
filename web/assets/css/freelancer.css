@@ -10,11 +10,11 @@ body {
 }
 
 p {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 p.small {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 a,
@@ -177,7 +177,7 @@ section {
 
 section h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 section.success {
@@ -340,10 +340,13 @@ footer {
 }
 
 footer h3 {
+    font-size: 17px;
+    margin-left: 35px;
     margin-bottom: 10px;
 }
 
 footer .footer-above {
+    height: 140px; 
     padding-top: 5px;
     background-color: #2c3e50;
 }
@@ -357,10 +360,19 @@ footer .footer-below {
     background-color: #233140;
 }
 
+footer ul {
+    width: 350px;
+}
+
+footer ul li a i{
+    position: relative;
+    top: -3px;
+}
+
 .btn-social {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 2px solid #fff;
     border-radius: 100%;
     text-align: center;
@@ -408,7 +420,7 @@ footer .footer-below {
 
 .portfolio-modal .modal-content h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 .portfolio-modal .modal-content img {

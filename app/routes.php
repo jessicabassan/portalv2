@@ -16,6 +16,13 @@ $app->post('/contato', function (Request $request) use ($app) {
 
     $post = $app['db']->insert('contato', $post);
 
+    $message = \Swift_Message::newInstance()
+        ->setSubject('teste')
+        ->setFrom(array('melhoridade@gmail.com'))
+        ->setTo(array('melhoridade@gmail.com'))
+        ->setBody($request->get('TeTa'));
+
+    $app['mailer']->send($message);
 
     return $app->redirect('/contato?sucesso');
 });

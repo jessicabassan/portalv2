@@ -150,15 +150,11 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 \t\t\t<!-- Header -->
 \t\t\t<header>
 \t\t\t    <div class=\"container\">
-\t\t\t        <div class=\"row\">
-
 \t\t\t\t\t\t\t\t";
-        // line 85
+        // line 83
         $this->displayBlock('content', $context, $blocks);
-        // line 86
-        echo "\t\t\t          \t
-\t\t\t        </div>
-\t\t\t    </div>
+        // line 84
+        echo "\t\t\t    </div>
 \t\t\t</header>
 
 \t\t</div>
@@ -214,7 +210,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 ";
     }
 
-    // line 85
+    // line 83
     public function block_content($context, array $blocks = array())
     {
     }
@@ -231,7 +227,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 
     public function getDebugInfo()
     {
-        return array (  218 => 85,  159 => 86,  157 => 85,  143 => 73,  132 => 70,  129 => 69,  125 => 68,  112 => 58,  90 => 39,  84 => 36,  80 => 35,  74 => 32,  70 => 31,  63 => 27,  57 => 24,  48 => 18,  42 => 15,  37 => 13,  33 => 12,  20 => 1,);
+        return array (  214 => 83,  157 => 84,  155 => 83,  143 => 73,  132 => 70,  129 => 69,  125 => 68,  112 => 58,  90 => 39,  84 => 36,  80 => 35,  74 => 32,  70 => 31,  63 => 27,  57 => 24,  48 => 18,  42 => 15,  37 => 13,  33 => 12,  20 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -316,11 +312,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 /* 			<!-- Header -->*/
 /* 			<header>*/
 /* 			    <div class="container">*/
-/* 			        <div class="row">*/
-/* */
 /* 								{% block content %}{% endblock %}*/
-/* 			          	*/
-/* 			        </div>*/
 /* 			    </div>*/
 /* 			</header>*/
 /* */

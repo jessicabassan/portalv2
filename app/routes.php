@@ -8,6 +8,7 @@ $app->get('/login', 'conteudo:login');
 $app->get('/admin/', 'conteudo:indexAdmin');
 $app->get('/admin/dashboard', 'conteudo:dashboard');
 $app->get('/cadastro', 'conteudo:cadastro');
+$app->get('/projeto', 'conteudo:projeto');
 
 $app->post('/contato', function (Request $request) use ($app) {
     $post = array(

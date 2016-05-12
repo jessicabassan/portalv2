@@ -1,9 +1,7 @@
 {% extends 'layouts/layout.tpl' %}
 
 {% block content %}
-<section id="contact">
 
-        <div class="row">
           <h2>Entre em contato</h2>
           <hr class="star-primary">
             <div class="col-lg-8 col-lg-offset-2">
@@ -47,7 +45,4 @@
                     </div>
                 </form>
             </div>
-        </div>
-    
-</section>
 {% endblock %}

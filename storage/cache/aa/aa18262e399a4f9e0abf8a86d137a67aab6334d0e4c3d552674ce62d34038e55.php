@@ -110,7 +110,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 \t\t\t            \t<img src=\"";
         // line 58
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "basepath", array()), "html", null, true);
-        echo "/assets/image/pericles.jpg\" >
+        echo "/assets/image/logo.png\" width=\"100%\" height=\"150%\">
 \t\t\t            </a>
 \t\t\t        </div>
 
@@ -151,22 +151,12 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 \t\t\t<header>
 \t\t\t    <div class=\"container\">
 \t\t\t        <div class=\"row\">
-\t\t\t            <div class=\"col-lg-12\">
-\t\t\t                <img class=\"img-responsive\" src=\"";
-        // line 85
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "basepath", array()), "html", null, true);
-        echo "/assets/image/profile.png\" alt=\"\">
-\t\t\t                <div class=\"intro-text\">
-\t\t\t                    <span class=\"name\"></span>
-\t\t\t                    <hr class=\"star-light\">
-\t\t\t                    <span class=\"skills\">
+
 \t\t\t\t\t\t\t\t";
-        // line 90
+        // line 85
         $this->displayBlock('content', $context, $blocks);
-        // line 91
-        echo "\t\t\t\t\t\t\t\t</span>
-\t\t\t                </div>
-\t\t\t            </div>
+        // line 86
+        echo "\t\t\t          \t
 \t\t\t        </div>
 \t\t\t    </div>
 \t\t\t</header>
@@ -220,10 +210,11 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 \t\t</div>
 \t</body>
 
-</html>";
+</html>
+";
     }
 
-    // line 90
+    // line 85
     public function block_content($context, array $blocks = array())
     {
     }
@@ -240,7 +231,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 
     public function getDebugInfo()
     {
-        return array (  227 => 90,  167 => 91,  165 => 90,  157 => 85,  143 => 73,  132 => 70,  129 => 69,  125 => 68,  112 => 58,  90 => 39,  84 => 36,  80 => 35,  74 => 32,  70 => 31,  63 => 27,  57 => 24,  48 => 18,  42 => 15,  37 => 13,  33 => 12,  20 => 1,);
+        return array (  218 => 85,  159 => 86,  157 => 85,  143 => 73,  132 => 70,  129 => 69,  125 => 68,  112 => 58,  90 => 39,  84 => 36,  80 => 35,  74 => 32,  70 => 31,  63 => 27,  57 => 24,  48 => 18,  42 => 15,  37 => 13,  33 => 12,  20 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -300,7 +291,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 /* 			                <span class="icon-bar"></span>*/
 /* 			            </button>*/
 /* 			            <a class="navbar-brand" href="/">*/
-/* 			            	<img src="{{ app.request.basepath }}/assets/image/pericles.jpg" >*/
+/* 			            	<img src="{{ app.request.basepath }}/assets/image/logo.png" width="100%" height="150%">*/
 /* 			            </a>*/
 /* 			        </div>*/
 /* */
@@ -326,16 +317,9 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 /* 			<header>*/
 /* 			    <div class="container">*/
 /* 			        <div class="row">*/
-/* 			            <div class="col-lg-12">*/
-/* 			                <img class="img-responsive" src="{{ app.request.basepath }}/assets/image/profile.png" alt="">*/
-/* 			                <div class="intro-text">*/
-/* 			                    <span class="name"></span>*/
-/* 			                    <hr class="star-light">*/
-/* 			                    <span class="skills">*/
+/* */
 /* 								{% block content %}{% endblock %}*/
-/* 								</span>*/
-/* 			                </div>*/
-/* 			            </div>*/
+/* 			          	*/
 /* 			        </div>*/
 /* 			    </div>*/
 /* 			</header>*/
@@ -390,3 +374,4 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 /* 	</body>*/
 /* */
 /* </html>*/
+/* */

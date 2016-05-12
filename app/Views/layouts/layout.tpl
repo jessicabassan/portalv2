@@ -55,7 +55,7 @@
 			                <span class="icon-bar"></span>
 			            </button>
 			            <a class="navbar-brand" href="/">
-			            	<img src="{{ app.request.basepath }}/assets/image/pericles.jpg" >
+			            	<img src="{{ app.request.basepath }}/assets/image/logo.png" width="100%" height="150%">
 			            </a>
 			        </div>
 
@@ -81,16 +81,9 @@
 			<header>
 			    <div class="container">
 			        <div class="row">
-			            <div class="col-lg-12">
-			                <img class="img-responsive" src="{{ app.request.basepath }}/assets/image/profile.png" alt="">
-			                <div class="intro-text">
-			                    <span class="name"></span>
-			                    <hr class="star-light">
-			                    <span class="skills">
+
 								{% block content %}{% endblock %}
-								</span>
-			                </div>
-			            </div>
+			          	
 			        </div>
 			    </div>
 			</header>

@@ -1,29 +1,16 @@
 <?php
 
+use app\Controller\Error\errorController;
+use app\Services\servicesController;
 use Symfony\Component\HttpFoundation\Request;
 
 $request = new Request;
-$path = '/var/www/portalv2/app/Controller';
 
-$exclude = [
-    'baseController.php'
-];
-
-$Directory = new \RecursiveDirectoryIterator($path);
-$Iterator = new \RecursiveIteratorIterator($Directory);
-$Regex = new \RegexIterator($Iterator, '/^.+\.php$/i', RecursiveRegexIterator::GET_MATCH);
-foreach ($Regex->getInnerIterator() as $file) {
-    if ($file->isFile() && !in_array($file->getFileName(), $exclude)) {
-        $name = strtolower(str_replace('Controller', '', reset(explode('.', $file->getFileName()))));
-        
-        $controller = sprintf(
-            "app\Controller\%s\%sController",
-            ucfirst($name),
-            $name
-        );
-
-        $app[$name] = $app->share(function () use ($app, $request, $controller) {
-            return new $controller($app, $request);
-        });
+$app->error(function (\Exception $e, $code) use ($app, $request) {
+    $errorController = new errorController($app, $request);
+    if ($code == 404) {
+        return $errorController->erro404();
     }
-}
+});
+
+(new servicesController($path))->getController($app, $request);

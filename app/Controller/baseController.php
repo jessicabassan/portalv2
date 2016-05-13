@@ -89,11 +89,13 @@ abstract class BaseController
     {
         $sql = "SELECT * FROM menu WHERE tipo_acesso = '{$tipo_acesso}'" ;
         $dados = $this->app['db']->fetchAll($sql);
+        
         $valoresMenu = array();
         foreach($dados as $menu) {
             $valoresMenu[] = $menu;
-        }
 
+        }
         return $valoresMenu;
+        
     }
 }

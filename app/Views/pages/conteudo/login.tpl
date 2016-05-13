@@ -4,7 +4,7 @@
 
       <div class="col-lg-4">
       <form class="form-signin" action="/login" method="POST">
-        <h2 class="form-signin-heading">Por favor realize o Login ou <a href="/cadastro"> CADASTRE-SE </a></h2>
+        <h2 class="form-signin-heading">Por favor realize o Login ou <a href="/cadastro" style="color: #AACCEE"> CADASTRE-SE </a></h2>
           <label for="inputEmail" class="sr-only">Endereco de Email</label>
             <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
           <label for="inputPassword" class="sr-only">Senha</label>

@@ -85,14 +85,17 @@ abstract class BaseController
         
     }
 
-    public function menu()
+    public function menu($tipo_acesso = 'u')
     {
-        $sql = 'SELECT * FROM menu WHERE tipo_acesso = "i"';
+        $sql = "SELECT * FROM menu WHERE tipo_acesso = '{$tipo_acesso}'" ;
         $dados = $this->app['db']->fetchAll($sql);
+        
+        $valoresMenu = array();
         foreach($dados as $menu) {
             $valoresMenu[] = $menu;
-        }
 
+        }
         return $valoresMenu;
+        
     }
 }

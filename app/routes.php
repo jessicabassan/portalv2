@@ -30,3 +30,21 @@ $app->post('/contato', function (Request $request) use ($app) {
 
     return $app->redirect('/contato?sucesso');
 });
+
+$app->post('/login', function (Request $lrequest) use ($app){
+  $login =array(
+    'email' => $lrequest->request->get('email'),
+    'senha' => $lrequest->request->get('senha'),
+  );
+
+    $autenticacao = $app['db']->prepare('SELECT nome FROM usuario WHERE email=? AND senha=?');
+    $autenticacao->execute([ $login['email'], $login['senha'] ]);
+    $nome = $autenticacao->fetchAll(PDO::FETCH_ASSOC);
+
+    if(empty($nome)) {
+
+        return ("Usuário e senha não encontrados");
+    }
+    
+    return ("Bem vindo sr. " . $nome[0]['nome']);
+});

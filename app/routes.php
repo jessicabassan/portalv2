@@ -65,3 +65,17 @@ $app->post('/loginAdmin', function (Request $lrequest) use ($app){
 
     return $app->redirect('/admin/dashboard');
 });
+
+
+$app->post('/cadastro', function (Request $request) use ($app) {
+    $post = array(
+        'nome' => $request->request->get('nome'),
+        'email' => $request->request->get('email'),
+        'senha' => $request->request->get('senha'),
+        'tipo_acesso' => ('u'),
+        );
+
+    $post = $app['db']->insert('usuario', $post);
+
+    return $app->redirect('/cadastro?sucesso');
+});

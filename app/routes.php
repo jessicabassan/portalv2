@@ -6,7 +6,7 @@ $app->get('/quemsomos', 'conteudo:quemsomos');
 $app->get('/contato', 'conteudo:contato');
 $app->get('/login', 'conteudo:login');
 $app->get('/loginAdmin', 'conteudo:loginAdmin');
-$app->get('/admin/', 'conteudo:indexAdmin');
+$app->get('/admin/', 'conteudo:indexAdmin'); #Essa linha é realmente necessária?
 $app->get('/admin/dashboard', 'conteudo:dashboard');
 $app->get('/cadastro', 'conteudo:cadastro');
 $app->get('/projeto', 'conteudo:projeto');

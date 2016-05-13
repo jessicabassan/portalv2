@@ -5,6 +5,7 @@ $app->get('/', 'conteudo:index');
 $app->get('/quemsomos', 'conteudo:quemsomos');
 $app->get('/contato', 'conteudo:contato');
 $app->get('/login', 'conteudo:login');
+$app->get('/loginAdmin', 'conteudo:loginAdmin');
 $app->get('/admin/', 'conteudo:indexAdmin');
 $app->get('/admin/dashboard', 'conteudo:dashboard');
 $app->get('/cadastro', 'conteudo:cadastro');
@@ -39,12 +40,28 @@ $app->post('/login', function (Request $lrequest) use ($app){
 
     $autenticacao = $app['db']->prepare('SELECT nome FROM usuario WHERE email=? AND senha=?');
     $autenticacao->execute([ $login['email'], $login['senha'] ]);
-    $nome = $autenticacao->fetchAll(PDO::FETCH_ASSOC);
+    $query = $autenticacao->fetchAll(PDO::FETCH_ASSOC);
 
-    if(empty($nome)) {
-
-        return ("Usuário e senha não encontrados");
+    if(empty($query)) {
+        return $app->redirect('/login?usuarionaoencontrado');
     }
-    
-    return ("Bem vindo sr. " . $nome[0]['nome']);
+
+    return ("Bem vindo sr. " . $query[0]['nome']);
+});
+
+$app->post('/loginAdmin', function (Request $lrequest) use ($app){
+  $login =array(
+    'email' => $lrequest->request->get('email'),
+    'senha' => $lrequest->request->get('senha'),
+  );
+
+    $autenticacao = $app['db']->prepare('SELECT nome FROM usuario WHERE email=? AND senha=? AND tipo_acesso="a"');
+    $autenticacao->execute([ $login['email'], $login['senha'] ]);
+    $query = $autenticacao->fetchAll(PDO::FETCH_ASSOC);
+
+    if(empty($query)) {
+        return $app->redirect("/loginAdmin?usuarionaoencontrado");
+    }
+
+    return $app->redirect('/admin/dashboard');
 });

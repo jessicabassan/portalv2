@@ -17,7 +17,7 @@
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
       </form>
-
+      <?php echo $_SERVER['REQUEST_URI']; ?>
     </div>
 
 {% endblock %}

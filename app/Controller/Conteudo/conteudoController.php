@@ -27,6 +27,11 @@ class conteudoController extends baseController
         return $this->render('login');
     }
 
+    public function loginAdmin()
+    {
+        return $this->render('loginAdmin');
+    }
+
     public function projeto()
     {
       return $this->render('projeto');

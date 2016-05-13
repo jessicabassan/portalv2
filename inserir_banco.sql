@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 13, 2016 at 08:33 PM
+-- Generation Time: May 13, 2016 at 08:38 PM
 -- Server version: 5.5.43-0+deb8u1
 -- PHP Version: 5.6.19-0+deb8u1
 
@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `contato`
 --
 
+DROP TABLE IF EXISTS `contato`;
 CREATE TABLE `contato` (
   `id` int(11) NOT NULL,
   `email` varchar(200) NOT NULL,
@@ -50,6 +51,7 @@ INSERT INTO `contato` (`id`, `email`, `nome`, `assunto`, `mensagem`) VALUES
 -- Table structure for table `conteudo`
 --
 
+DROP TABLE IF EXISTS `conteudo`;
 CREATE TABLE `conteudo` (
   `id` tinyint(4) NOT NULL,
   `titulo` varchar(200) NOT NULL,
@@ -72,6 +74,7 @@ INSERT INTO `conteudo` (`id`, `titulo`, `texto`, `data`, `usuario`) VALUES
 -- Table structure for table `idoso`
 --
 
+DROP TABLE IF EXISTS `idoso`;
 CREATE TABLE `idoso` (
   `id` int(11) NOT NULL,
   `nome` varchar(60) NOT NULL,
@@ -93,6 +96,7 @@ INSERT INTO `idoso` (`id`, `nome`, `idade`, `endereco`, `email`) VALUES
 -- Table structure for table `menu`
 --
 
+DROP TABLE IF EXISTS `menu`;
 CREATE TABLE `menu` (
   `id` int(11) NOT NULL,
   `titulo` varchar(200) NOT NULL,
@@ -118,6 +122,7 @@ INSERT INTO `menu` (`id`, `titulo`, `link`, `tipo_acesso`) VALUES
 -- Table structure for table `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `email` varchar(200) NOT NULL,

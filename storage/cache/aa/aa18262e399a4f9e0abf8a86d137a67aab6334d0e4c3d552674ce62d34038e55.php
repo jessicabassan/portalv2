@@ -110,7 +110,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 \t\t\t            \t<img src=\"";
         // line 58
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "basepath", array()), "html", null, true);
-        echo "/assets/image/logo.png\" width=\"100%\" height=\"150%\">
+        echo "/assets/image/logo.png\" width=\"80%\" height=\"150%\">
 \t\t\t            </a>
 \t\t\t        </div>
 
@@ -287,7 +287,7 @@ class __TwigTemplate_ff367f0f33095de2227c1d35d3dd41df5b4773bd94a77212cba90aa574c
 /* 			                <span class="icon-bar"></span>*/
 /* 			            </button>*/
 /* 			            <a class="navbar-brand" href="/">*/
-/* 			            	<img src="{{ app.request.basepath }}/assets/image/logo.png" width="100%" height="150%">*/
+/* 			            	<img src="{{ app.request.basepath }}/assets/image/logo.png" width="80%" height="150%">*/
 /* 			            </a>*/
 /* 			        </div>*/
 /* */

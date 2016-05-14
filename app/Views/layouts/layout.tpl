@@ -55,7 +55,7 @@
 			                <span class="icon-bar"></span>
 			            </button>
 			            <a class="navbar-brand" href="/">
-			            	<img src="{{ app.request.basepath }}/assets/image/logo.png" width="100%" height="150%">
+			            	<img src="{{ app.request.basepath }}/assets/image/logo.png" width="80%" height="150%">
 			            </a>
 			        </div>
 

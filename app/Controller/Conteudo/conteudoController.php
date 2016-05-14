@@ -1,8 +1,14 @@
 <?php
 namespace app\Controller\Conteudo;
 use app\Controller\baseController;
+use app\Model\Conteudo\conteudoModel;
+
 class conteudoController extends baseController
 {
+    public function getConteudo()
+    {
+        return new conteudoModel($this->app);
+    }
     //Portal
     public function index()
     {
@@ -11,8 +17,7 @@ class conteudoController extends baseController
 
     public function quemsomos()
     {
-    	$sql = 'SELECT * FROM conteudo WHERE titulo = "quemsomos"';
-    	$dados = $this->app['db']->fetchAssoc($sql);
+    	$dados = $this->getConteudo()->conteudoQuemSomos();
 
         return $this->render('quemsomos', $dados);
     }

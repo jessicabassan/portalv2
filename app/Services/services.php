@@ -13,4 +13,4 @@ $app->error(function (\Exception $e, $code) use ($app, $request) {
     }
 });
 
-(new servicesController($path))->getController($app, $request);
+(new servicesController)->getController($app, $request);
